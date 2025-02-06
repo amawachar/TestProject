@@ -10,7 +10,7 @@ public class MyDataProvider {
 				{ "Akash", "admin123", "//*[text()='Invalid credentials']" },
 				{ "Akash", "Akash", "//*[text()='Invalid credentials']" },
 				{ "Admin", "admin123", "(//*[@class=\"oxd-userdropdown-img\"])" }
-				//djhjdhg
+				
 		};
 
 	}

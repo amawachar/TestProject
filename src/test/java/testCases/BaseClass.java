@@ -1,10 +1,13 @@
 package testCases;
 
+import java.awt.Desktop;
 import java.io.File;
+import java.io.IOException;
 import java.time.Duration;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
@@ -15,7 +18,6 @@ import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import com.aventstack.extentreports.reporter.configuration.Theme;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 import utilsClasses.UtilsDate;
 
 public class BaseClass {
@@ -24,13 +26,14 @@ public class BaseClass {
 	public ExtentTest test;
 
 	public WebDriver driver;
+	File file;
 
-	@BeforeSuite
+	@BeforeSuite(alwaysRun = true)
 	public void setUp() {
 
-		File file = new File("./Reports/" + UtilsDate.getCurrentYear() + "/" + UtilsDate.getCurrentMonth() + "/"
-				+ UtilsDate.getCurrentDay() + "/" + "" 
-				+ "Automation Reports "+UtilsDate.getFormattedTimestamp()+".html");
+		file = new File("./Reports/" + UtilsDate.getCurrentYear() + "/" + UtilsDate.getCurrentMonth() + "/"
+				+ UtilsDate.getCurrentDay() + "/" + "" + "Automation Reports " + UtilsDate.getFormattedTimestamp()
+				+ ".html");
 
 		ExtentSparkReporter spark = new ExtentSparkReporter(file);
 		spark.config().setTheme(Theme.DARK);
@@ -42,28 +45,33 @@ public class BaseClass {
 
 		extent.setSystemInfo("Host name", "localhost");
 		extent.setSystemInfo("Environemnt", "QA");
-		extent.setSystemInfo("user", "pavan");
+		extent.setSystemInfo("user", "Tester");
+		extent.setSystemInfo("browser", "Chrome");
 
 		extent.attachReporter(spark);
 	}
 
-	@BeforeMethod
+	@BeforeMethod(alwaysRun = true)
 	public void openurl() {
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 		driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
 
-		extent.setSystemInfo("browser", "Chrome");
 	}
 
-	@AfterMethod
-	public void closeUrl() {
+	@AfterMethod(alwaysRun = true)
+	public void closeUrl(ITestResult result) {
+		// Assign categories based on TestNG groups
+		for (String group : result.getMethod().getGroups()) {
+			test.assignCategory(group);
+		}
 		driver.close();
 	}
 
-	@AfterSuite
-	public void tearDown() {
+	@AfterSuite(alwaysRun = true)
+	public void tearDown() throws IOException {
 		extent.flush();
+		Desktop.getDesktop().browse(file.toURI());
 	}
 }

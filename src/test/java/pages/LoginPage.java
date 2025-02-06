@@ -9,11 +9,11 @@ import org.openqa.selenium.WebDriver;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
 
-import seleniumUtlis.Method;
+import seleniumUtlis.SeleniumMethod;
 
 public class LoginPage {
 	private WebDriver driver;
-	Method method;
+	SeleniumMethod method;
 
 	private By userName = By.name("username");
 	private By password = By.name("password");
@@ -21,7 +21,7 @@ public class LoginPage {
 
 	public LoginPage(WebDriver dr) {
 		driver = dr;
-		method = new Method(driver);
+		method = new SeleniumMethod(driver);
 
 	}
 

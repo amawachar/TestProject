@@ -1,45 +1,114 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-01-17T16:20:32 IST" name="Default suite" finished-at="2025-01-17T16:21:24 IST" duration-ms="52419">
+  <suite started-at="2025-02-05T12:47:31 IST" name="Default suite" finished-at="2025-02-05T12:48:54 IST" duration-ms="82612">
     <groups>
+      <group name="Negative">
+        <method signature="LoginTestCases2.TC_01()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_01" class="testCases.LoginTestCases2"/>
+        <method signature="LoginTestCases2.TC_02()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_02" class="testCases.LoginTestCases2"/>
+        <method signature="LoginTestCases2.TC_03()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_03" class="testCases.LoginTestCases2"/>
+      </group> <!-- Negative -->
+      <group name="Positive">
+        <method signature="LoginTestCases2.TC_04()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_04" class="testCases.LoginTestCases2"/>
+      </group> <!-- Positive -->
+      <group name="Regression">
+        <method signature="LoginTestCases2.TC_01()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_01" class="testCases.LoginTestCases2"/>
+        <method signature="LoginTestCases2.TC_02()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_02" class="testCases.LoginTestCases2"/>
+        <method signature="LoginTestCases2.TC_03()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_03" class="testCases.LoginTestCases2"/>
+        <method signature="LoginTestCases2.TC_04()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_04" class="testCases.LoginTestCases2"/>
+      </group> <!-- Regression -->
+      <group name="Smoke">
+        <method signature="LoginTestCases2.TC_04()[pri:0, instance:testCases.LoginTestCases2@1349883]" name="TC_04" class="testCases.LoginTestCases2"/>
+      </group> <!-- Smoke -->
     </groups>
-    <test started-at="2025-01-17T16:20:32 IST" name="Default test" finished-at="2025-01-17T16:21:24 IST" duration-ms="52419">
-      <class name="testCases.LoginTestCases">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:20:30 IST" name="setUp" finished-at="2025-01-17T16:20:32 IST" duration-ms="1805" status="PASS">
+    <test started-at="2025-02-05T12:47:31 IST" name="Default test" finished-at="2025-02-05T12:48:54 IST" duration-ms="82612">
+      <class name="testCases.LoginTestCases2">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:47:31 IST" name="setUp" finished-at="2025-02-05T12:47:31 IST" duration-ms="683" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method is-config="true" signature="openurl()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:20:32 IST" name="openurl" finished-at="2025-01-17T16:20:44 IST" duration-ms="11806" status="PASS">
+        <test-method is-config="true" signature="openurl()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:47:32 IST" name="openurl" finished-at="2025-02-05T12:47:42 IST" duration-ms="10346" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openurl -->
-        <test-method signature="TC_01()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:20:44 IST" name="TC_01" description="Login with Valid Credentials" finished-at="2025-01-17T16:20:52 IST" duration-ms="8189" status="PASS">
+        <test-method signature="TC_01()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:47:42 IST" name="TC_01" description="Login with valid username and Invalid Password" finished-at="2025-02-05T12:47:48 IST" duration-ms="6509" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_01 -->
-        <test-method is-config="true" signature="closeUrl()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:20:52 IST" name="closeUrl" finished-at="2025-01-17T16:20:52 IST" duration-ms="234" status="PASS">
+        <test-method is-config="true" signature="closeUrl(org.testng.ITestResult)[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:47:48 IST" name="closeUrl" finished-at="2025-02-05T12:47:49 IST" duration-ms="194" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_01 status=SUCCESS method=LoginTestCases2.TC_01()[pri:0, instance:testCases.LoginTestCases2@1349883] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUrl -->
-        <test-method is-config="true" signature="openurl()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:20:52 IST" name="openurl" finished-at="2025-01-17T16:21:02 IST" duration-ms="9762" status="PASS">
+        <test-method is-config="true" signature="openurl()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:47:49 IST" name="openurl" finished-at="2025-02-05T12:47:58 IST" duration-ms="9126" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openurl -->
-        <test-method signature="TC_02()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:21:02 IST" name="TC_02" finished-at="2025-01-17T16:21:24 IST" duration-ms="22023" status="PASS">
+        <test-method signature="TC_02()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:47:58 IST" name="TC_02" description="Login with valid username and Invalid Password" finished-at="2025-02-05T12:48:20 IST" duration-ms="21785" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- TC_02 -->
-        <test-method is-config="true" signature="closeUrl()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:21:24 IST" name="closeUrl" finished-at="2025-01-17T16:21:24 IST" duration-ms="187" status="PASS">
+        <test-method is-config="true" signature="closeUrl(org.testng.ITestResult)[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:20 IST" name="closeUrl" finished-at="2025-02-05T12:48:20 IST" duration-ms="76" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_02 status=SUCCESS method=LoginTestCases2.TC_02()[pri:0, instance:testCases.LoginTestCases2@1349883] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeUrl -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginTestCases@79e4c792]" started-at="2025-01-17T16:21:24 IST" name="tearDown" finished-at="2025-01-17T16:21:25 IST" duration-ms="903" status="PASS">
+        <test-method is-config="true" signature="openurl()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:20 IST" name="openurl" finished-at="2025-02-05T12:48:28 IST" duration-ms="8874" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openurl -->
+        <test-method signature="TC_03()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:28 IST" name="TC_03" description="Login with Invalid username and Invalid Password" finished-at="2025-02-05T12:48:35 IST" duration-ms="6870" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_03 -->
+        <test-method is-config="true" signature="closeUrl(org.testng.ITestResult)[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:35 IST" name="closeUrl" finished-at="2025-02-05T12:48:36 IST" duration-ms="353" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_03 status=SUCCESS method=LoginTestCases2.TC_03()[pri:0, instance:testCases.LoginTestCases2@1349883] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeUrl -->
+        <test-method is-config="true" signature="openurl()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:36 IST" name="openurl" finished-at="2025-02-05T12:48:46 IST" duration-ms="9905" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openurl -->
+        <test-method signature="TC_04()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:46 IST" name="TC_04" description="Login with valid username and valid Password" finished-at="2025-02-05T12:48:54 IST" duration-ms="8298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TC_04 -->
+        <test-method is-config="true" signature="closeUrl(org.testng.ITestResult)[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:54 IST" name="closeUrl" finished-at="2025-02-05T12:48:54 IST" duration-ms="154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=TC_04 status=SUCCESS method=LoginTestCases2.TC_04()[pri:0, instance:testCases.LoginTestCases2@1349883] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeUrl -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.LoginTestCases2@1349883]" started-at="2025-02-05T12:48:54 IST" name="tearDown" finished-at="2025-02-05T12:48:55 IST" duration-ms="1100" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.LoginTestCases -->
+      </class> <!-- testCases.LoginTestCases2 -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
